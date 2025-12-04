@@ -1,16 +1,101 @@
-# React + Vite
+🛒 E-Commerce Website — React.js + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built during Web Master Training Program
 
-Currently, two official plugins are available:
+📌 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a full E-Commerce web application built using React.js, Vite, and Tailwind CSS, integrated with a real API and structured using Context API for global state management.
 
-## React Compiler
+The project was developed as part of the Web Master Training Program, where I learned and applied real-world frontend development practices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚀 Features
+🔐 Authentication
 
-## Expanding the ESLint configuration
+Login / Register
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+JWT-based auth
+
+Protected Routes
+
+🛍️ Products
+
+Fetch all products from API
+
+Pagination
+
+Dynamic filtering (Category, Brand, Price, Availability)
+
+Search
+
+Unique product merging logic
+
+Product quantity indicator
+
+❤️ Wishlist
+
+Add/remove favorites
+
+Save to backend
+
+🛒 Cart
+
+Add to cart
+
+Update quantity
+
+Remove item
+
+Clear cart
+
+Auto-sync after login
+
+📦 Offers
+
+Top offers
+
+Weekly offers
+
+Logic for time-based deals
+
+🧭 UI
+
+Fully responsive
+
+Header with search, categories, wishlist, cart
+
+Dropdown menus
+
+Toast messages
+
+Clean component structure
+
+🛠️ Tech Stack
+Technology	Use
+React.js	UI building
+Vite	Fast bundler
+Tailwind CSS	Styling
+Context API	State management
+Axios	API calls
+Vercel	Deployment
+📡 Environment Setup
+
+Create a .env file:
+
+VITE_API_URL=https://e-commarce-website-eight.vercel.app/api/v1
+
+▶️ Run Locally
+npm install
+npm run dev
+
+🌐 Live Demo
+
+https://e-commerce-dusky-mu-65.vercel.app/
+🧑‍💻 Author
+
+Suleiman (Jimmy)
+Frontend Developer
+Link: https://www.linkedin.com/in/your-profile/
+
+🔗 Training Program
+
+Project built during Web Master Internship & Training Program.
