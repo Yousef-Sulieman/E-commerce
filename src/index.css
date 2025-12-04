@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #35afa0;
+  --secondary-color: #00ff00;
+  --tertiary-color: #0000ff;
+  --color-white: #fff;
+}
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary-color);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary-color);
+  --color-white: var(--color-white);
+}
+
+.dark {
+}
+
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .container {
+    @apply mx-auto px-4 md:px-8 lg:px-12 xl:px-24;
+  }
+  .section-gap {
+    @apply my-8 md:my-24;
+  }
+} */
+.selected {
+  /* background-color: #0070f3;
+  color: white;
+  font-weight: bold; */
+}
+
+/* تغيير لون الأسهم */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: #494848; /* غير اللون هنا */
+  font-weight: bold;
+  background: #ffff;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 50%; /* يخليها دائرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* تكبير حجم الأيقونة */
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 60px;
+}
+
+/* Hover */
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #494848;
+}
+
+/* شكل النقطة */
+.hero-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  width: 10px;
+  height: 10px;
+  opacity: 1; /* مهم علشان تبان */
+}
+
+/* النقطة النشطة */
+.hero-swiper .swiper-pagination-bullet-active {
+  background: white;
+  width: 12px;
+  height: 12px;
+}
