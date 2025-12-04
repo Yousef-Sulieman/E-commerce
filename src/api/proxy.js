@@ -1,38 +1,21 @@
-// /api/proxy.js
-export default async function handler(req, res) {
-  const { method } = req;
+// export default async function handler(req, res) {
+//   const backendURL = "https://e-commarce-website-eight.vercel.app";
 
-  // API BASE URL اللي انت بتكلّم منه
-  const targetUrl =
-    "https://e-commarce-website-eight.vercel.app" +
-    req.url.replace("/api/proxy", "");
+//   const url = backendURL + req.url.replace("/api/proxy", "/api/v1");
 
-  // Copy headers
-  const requestHeaders = { ...req.headers };
-  delete requestHeaders.host;
+//   try {
+//     const response = await fetch(url, {
+//       method: req.method,
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: req.headers.authorization || "",
+//       },
+//       body: req.method !== "GET" ? req.body : undefined,
+//     });
 
-  try {
-    const response = await fetch(targetUrl, {
-      method,
-      headers: requestHeaders,
-      body: method === "GET" ? null : JSON.stringify(req.body),
-    });
-
-    const data = await response.text();
-
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET,POST,PUT,DELETE,OPTIONS"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Content-Type, Authorization"
-    );
-
-    return res.status(response.status).send(data);
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({ message: "Proxy error", error: err });
-  }
-}
+//     const data = await response.text();
+//     res.status(response.status).send(data);
+//   } catch (err) {
+//     res.status(500).json({ error: "Proxy failed", details: err.message });
+//   }
+// }
