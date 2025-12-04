@@ -1,4 +1,4 @@
-import axiosClient from "../utils/axiosClient";
+import axiosClient from "./axiosClient";
 
 // ===== Auth Endpoints =====
 export const registerUser = (data) => axiosClient.post("/auth/register", data);

@@ -1,4 +1,4 @@
-import axiosClient from "../utils/axiosClient";
+import axiosClient from "./axiosClient";
 
 // ===== Get all products =====
 // export const getAllProducts = async () => {

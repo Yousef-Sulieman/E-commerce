@@ -5,7 +5,7 @@ import {
   logoutUser,
   refreshToken as refreshTokenAPI,
   updateProfile,
-} from "../api/auth";
+} from "../utils/auth";
 
 const AuthContext = createContext();
 

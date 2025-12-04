@@ -1,10 +1,14 @@
-// src/utils/axiosClient.js
 import axios from "axios";
 
+const isVercel =
+  typeof window !== "undefined" &&
+  window.location.hostname.includes("vercel.app");
+
 const axiosClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL, // 🔥 من الـ .env
-  headers: { "Content-Type": "application/json" },
-  withCredentials: true,
+  baseURL: isVercel ? "/api" : import.meta.env.VITE_API_URL, // LOCAL ONLY
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 axiosClient.interceptors.request.use((config) => {
@@ -12,19 +16,5 @@ axiosClient.interceptors.request.use((config) => {
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
-
-axiosClient.interceptors.response.use(
-  (res) => res,
-  (err) => {
-    if (!err.response) {
-      console.error("Network / CORS error", err);
-      return Promise.reject(err);
-    }
-    if (err.response.status === 401) {
-      console.log("Unauthorized");
-    }
-    return Promise.reject(err);
-  }
-);
 
 export default axiosClient;

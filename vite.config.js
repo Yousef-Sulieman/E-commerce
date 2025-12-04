@@ -4,14 +4,4 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [tailwindcss(), react()],
-  // server: {
-  //   proxy: {
-  //     "/api": {
-  //       target: "https://e-commarce-website-eight.vercel.app",
-  //       changeOrigin: true,
-  //       secure: true,
-  //       rewrite: (path) => path.replace(/^\/api/, "/api/v1"),
-  //     },
-  //   },
-  // },
 });
