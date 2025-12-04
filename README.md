@@ -94,7 +94,7 @@ https://e-commerce-dusky-mu-65.vercel.app/
 
 Suleiman (Jimmy)
 Frontend Developer
-Link: https://www.linkedin.com/in/your-profile/
+Link: www.linkedin.com/in/yousef-sulieman
 
 🔗 Training Program
 
